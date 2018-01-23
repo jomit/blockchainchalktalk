@@ -1,0 +1,160 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>sample dapp</title>
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+
+<body>
+  <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <div class="container">
+    <div class="header">
+    
+      <h3 class="text-muted">Calculator Sample DApp</h3>
+    </div>
+
+    <!-- CONNECT -->
+    <div class="row">
+      <div class="col-lg" style="background-color: #e9ecef;">
+        <p>
+          <h5>Connect</h5>
+        </p>
+        <p><span><input type='text' id='providerUrl' value='http://localhost:8545'></span></p>
+        <p><span><button onclick="connect()">Connect</button></span>
+          <span id="accountCount" style="color:blueviolet"></span></p>
+      </div>
+      <div class="col-lg" style="background-color: #e9ecef;">
+        <p>
+          <ul id="accountList">
+          </ul>
+        </p>
+      </div>
+    </div>
+    <hr/>
+    <!-- DEPLOY CONTRACT -->
+    <div class="row">
+      <div class="col-lg" style="background-color: #e9ecef;">
+        <p>
+          <h5>Unlock Account</h5>
+        </p>
+        <p><span>Account:<input type='text' id='accountToUnlock' value=''></span>
+          <span>Password:<input type='password' id='accountPassword' value=''></span>
+          <span><button onclick="unlockAccount()">Unlock</button></span>
+          <span id="unlockStatus" style="color:blueviolet"></span></p>
+      </div>
+    </div>
+    <hr/>
+    <!-- DEPLOY CONTRACT -->
+    <div class="row">
+      <div class="col-lg" style="background-color: #e9ecef;">
+        <p>
+          <h5>Deploy Contract</h5>
+        </p>
+        <p><span>Contract Abi: <input type='text' id='contractInterface' value=''></span></p>
+        <p><span>Contract Bin: <input type='text' id='contractByteCode' value=''></span></p>
+        <p><span>Initial Number: <input type='text' id='initialNumber' value='10'></span></p>
+        <p>
+          <span><button id="btnDeploy" onclick="deployContract()">Deploy</button></span>
+        </p>
+      </div>
+      <div class="col-lg-6" style="background-color: #e9ecef;">
+        <p>
+          <h5>&nbsp;</h5>
+        </p>
+        <p>Contract Address : <input type='text' id='contractAddress' value='' readonly></span>
+        </p>
+        <p>
+          <span><button id="bntGetResult" onclick="showResultValue()">Show Result Value</button></span> =>
+          <strong><span id="contractResultValue" style="color:green"></span></strong>
+        </p>
+        <!-- <p><span><button id="bntWatchEvents" onclick="watchEvents()">Start Watching Events...</button></span></p> -->
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-lg" style="background-color: #e9ecef;">
+        <p>Transaction Hash: <span id="contractDeployResult" style="color:blueviolet"></span></p>
+    </div></div>
+    <hr/>
+    <!-- INVOKE ADD  / SUBTRACT FUNCTION -->
+    <div class="row">
+      <div class="col-lg" style="background-color: #e9ecef;">
+        <p>
+          <h5>ADD</h5>
+        </p>
+        <p><span>Number: <input type='text' id='numberToAdd' value=''></span>
+          <span><button id="btnAdd" onclick="add()">Add</button></span>
+        </p>
+      </div>
+      <div class="col-lg" style="background-color: #e9ecef;">
+        <p>
+          <h5>SUBTRACT</h5>
+        </p>
+        <p><span>Number: <input type='text' id='numberToSubtract' value=''></span>
+          <span><button id="btnAdd" onclick="subtract()">Subtract</button></span>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg" style="background-color: #e9ecef;">
+        <p>Transaction Hash : <span id="functionCallResult" style="color:blueviolet"></span></p>
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-lg" style="background-color: lightblue">
+          <p>
+            <h5>EVENTS</h5>
+          </p>
+          <p><span id='resultUpdatedEvent'></span></p>
+        </div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+  </div>
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/popper.js/dist/umd/popper.js"></script>
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/plugins.js -->
+  <script src="/bower_components/bootstrap/js/dist/util.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/button.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/modal.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/popover.js"></script>
+  <script src="/bower_components/web3/dist/web3.min.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>
