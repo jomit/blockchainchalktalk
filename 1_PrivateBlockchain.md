@@ -7,7 +7,7 @@
 
 ## Initialize the network with a genesis block
 
-    copy c:\repos\bchack\chalktalk\genesis.json genesis.json
+    copy ..\genesis.json genesis.json
 
     (update account address, give it 10 trillion ethers)
 
