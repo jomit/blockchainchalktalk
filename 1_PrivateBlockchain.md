@@ -1,3 +1,7 @@
+## Prereq
+
+- Download [Geth](https://geth.ethereum.org/downloads/)
+
 ## Create a genesis account
 
     md node1
