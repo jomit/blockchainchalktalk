@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asset Details</title>
+  <link rel="stylesheet" href="styles/main.css">
+  
+</head>
+
+<body style="color: rgb(80,80,80);">
+  <div class="container" style="color: grey; padding : 0px">
+    <div class="header" style="background-color: rgb(0, 120, 215); color:rgb(255, 255, 255);padding: 10px; margin-bottom : 0">
+      <h2 class="text-muted" style="color:rgb(255, 255, 255); padding-left: 220px">Permissioned Supply Chain Demo DApp
+        <span onclick="clearDB()" style="cursor: pointer">&nbsp;&nbsp;&nbsp;</span>
+      </h2>
+      </br>
+      <p>
+        <a href="index.html" style="color:rgb(255,255,255)">&lt;&lt;Back</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        Current Account:
+        <span>
+          <select id="accountList" style="background-color:rgb(0, 120, 215);">
+          </select>
+        </span>
+      </p>
+    </div>
+    <div class="row" style="margin-left: 0px; margin-right: 0px; padding: 10px">
+      <div class="col-lg">
+        <h3>Asset Details</h3>
+        <p>Asset Id :
+          <strong>
+            <span id="assetAddress"></span>
+          </strong>
+        </p>
+        <p>Current State :
+          <strong>
+            <span id="assetState"></span>
+          </strong>
+        </p>
+        <p>...</p>
+        <p id="workflowSection" hidden>
+          <table>
+            <tr>
+              <td><p><span id="workflowLabel"></span></p></td>
+              <td><p><input type="text" id="workflowData" style="width:500px" /></p></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><button onclick="callContractMethod()" id="workflowBtn" class="btn btn-default"></button></td>
+            </tr>
+          </table>
+        </p>
+        <hr/>
+      </div>
+      <div class="col-lg" style="background-color: rgb(243, 243, 243); padding-left: 10px; padding-top:5px">
+        <h3>Asset History </h3>
+        <div id="assetHistoryList">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/lib/jquery.min.js"></script>
+  <script src="/lib/modernizr.js"></script>
+  <script src="/lib/web3.min.js"></script>
+  <script src="scripts/helper.js"></script>
+  <script src="scripts/assetdetails.js"></script>
+
+
+</body>
+
+</html>

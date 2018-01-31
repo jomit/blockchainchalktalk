@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asset List</title>
+
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+
+</head>
+
+<body style="color: rgb(80,80,80);">
+  <div class="container" style=" padding : 0px">
+    <div class="header" style="background-color: rgb(0, 120, 215); color:rgb(255, 255, 255);padding: 10px; margin-bottom : 0">
+      <h2 class="text-muted" style="color:rgb(255, 255, 255); padding-left: 220px">Permissioned Supply Chain Demo DApp
+        <span onclick="clearDB()" style="cursor: pointer">&nbsp;&nbsp;&nbsp;</span>
+      </h2>
+      </br>
+      <p>Current Organization:
+        <span>
+          <select id="orgList" onchange="updateAccountList()" style="background-color:rgb(0, 120, 215);">
+            <option>--Select an Organization--</option>
+          </select>
+        </span>
+        &nbsp;&nbsp;&nbsp;Current Account:
+        <span>
+          <select id="accountList" style="background-color:rgb(0, 120, 215);">
+          </select>
+        </span>
+      </p>
+    </div>
+    <div class="row" style="margin-left: 0px; margin-right: 0px;">
+      <div class="col-lg">
+        <h3>Raw Material</h3>
+        <table>
+          <tr>
+            <td>
+              <p>Material Data: &nbsp;&nbsp;</p>
+            </td>
+            <td>
+              <p>
+                <input type='text' id='rawMaterialsData' value='{ batchId : 101, location: "Mars-SectorA", materialType : "ZAT-669" }'
+                  style="width:500px" />
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Private For: </p>
+            </td>
+            <td>
+              <p>
+                <select id="privateForOrgList">
+                  <option>--Select an Organization--</option>
+                </select>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <button onclick="addRawMaterial()" id="addRawMaterialBtn" class="btn btn-default">Add Raw Material</button>
+            </td>
+          </tr>
+        </table>
+        <p>
+          <span id="assetContractAddress" style="color:blueviolet"></span>
+        </p>
+      </div>
+      <hr/>
+      <div class="col-lg" style="background-color: rgb(243, 243, 243);padding-left: 10px; padding-top:5px">
+        <h3>Asset List</h3>
+        <div id="assetList">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/lib/jquery.min.js"></script>
+  <script src="/lib/modernizr.js"></script>
+  <script src="/lib/web3.min.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/helper.js"></script>
+</body>
+
+</html>
