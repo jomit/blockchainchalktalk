@@ -1,5 +1,5 @@
 # Blockchain Chalktalk
-Sampe Code + Walkthroughs from the blockchain chalk talk
+Code + Walkthroughs from the blockchain chalk talk
 
 - [Create Private Blockchain locally](https://github.com/jomit/blockchainchalktalk/blob/master/1_PrivateBlockchain.md)
 
