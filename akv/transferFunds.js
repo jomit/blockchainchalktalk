@@ -1,7 +1,7 @@
-function transferFunds(toAccount, ethValue) {
+function transferFunds(toAccount, etherValue) {
     var from = eth.accounts[0];
     var to = toAccount;
-    var value = web3.toWei(ethValue, "ether");
+    var value = web3.toWei(etherValue, "ether");
     var txn = { from : from, to: to, value : value };
     personal.unlockAccount(eth.accounts[0],"password")
     eth.sendTransaction(txn);

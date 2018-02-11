@@ -57,10 +57,11 @@
             // Get eth account Address from keyname
             accountController.getAccountDetails(keyName, client, function (accountDetails) {
                 
+                var fromAccount = "0x" + accountDetails.ethAccountAddress;
+
                 // Create new transaction object
                 var web3 = new Web3(new Web3.providers.HttpProvider(rpcUrl));
                 var nonce = web3.eth.getTransactionCount(fromAccount);
-                var fromAccount = "0x" + accountDetails.ethAccountAddress;
 
                 var rawTransaction = {
                     nonce: nonce,
@@ -95,21 +96,30 @@
                     // 6 v
                     // 7 r
                     // 8 s
-                    // Update v, r, s values in the raw transaction 
 
-                    //var v = new Buffer(27);  // FIX: Can't find a way to recover ???
-                    //rawTx[6] = v;
+                    // Update r value in the raw transaction 
                     var r = keyOperation.result.slice(0, 32);
                     rawTx[7] = r;
+
+                    // Update s value in the raw transaction 
                     var s = keyOperation.result.slice(32, 64);
                     rawTx[8] = s;
 
+                    // Update v value in the raw transaction 
+                    var pubKey = Buffer.concat([accountDetails.keyBundle.key.x, accountDetails.keyBundle.key.y]);
+
+                    var recoverPubKey = ethUtil.ecrecover(rawHash,27,r,s);
+                    if(Buffer.compare(pubKey, recoverPubKey) == 0){
+                        rawTx[6] = new Buffer([0x1b]);
+                    } else {
+                        rawTx[6] = new Buffer([0x1c]);
+                    }
+
                     // Get the rlp encoded hash of the signed transaction
                     var signedTx = ethUtil.bufferToHex(ethUtil.rlp.encode(rawTx));
-                    //console.log("signedTx => " + signedTx);
 
                     // Submit the raw transaction
-                    var transactionHash = web3.eth.sendRawTransaction(signedTx);
+                    var transactionHash = web3.eth.sendRawTransaction(signedTx);  // TODO : Debug "invalid sender" error 
                     res.json({
                         transactionHash: transactionHash,
                         estimatedGas: estimatedGas,
