@@ -1,4 +1,4 @@
-# Demo - Using Azure KeyVault to manage Etherem Keys
+# Demo - Using Azure KeyVault to manage Ethereum keys
 
 ## Setup
 
