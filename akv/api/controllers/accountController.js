@@ -97,7 +97,7 @@
                     // 8 s
                     // Update v, r, s values in the raw transaction 
 
-                    //var v = new Buffer(27);  // TODO: Can't find a way to recover ???
+                    //var v = new Buffer(27);  // FIX: Can't find a way to recover ???
                     //rawTx[6] = v;
                     var r = keyOperation.result.slice(0, 32);
                     rawTx[7] = r;
