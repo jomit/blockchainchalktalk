@@ -112,6 +112,7 @@
                     if(Buffer.compare(pubKey, recoverPubKey) == 0){
                         rawTx[6] = new Buffer([0x1b]);
                     } else {
+                        // Assuming the v is 28. Do we need to check for 29 and 30 ????
                         rawTx[6] = new Buffer([0x1c]);
                     }
 
