@@ -5,10 +5,10 @@ Code + Walkthroughs for blockchain chalk talk
 
 - [Create and Test Smartcontracts](https://github.com/jomit/blockchainchalktalk/blob/master/2_SmartContracts.md)
 
-- [Demo - Simple Calculator Demo](https://github.com/jomit/blockchainchalktalk/blob/master/3_DApp.md)
+- [Demo - Calculator DApp](https://github.com/jomit/blockchainchalktalk/blob/master/3_DApp.md)
 
-- [Demo - Simple Supply Chain using Ethereum](https://github.com/jomit/blockchainchalktalk/tree/master/supplychain/ethereum-dapp)
+- [Demo - Public Supply Chain DApp using Ethereum](https://github.com/jomit/blockchainchalktalk/tree/master/supplychain/ethereum-dapp)
 
 - [Demo - Permissioned Supply Chain using Quorum](https://github.com/jomit/blockchainchalktalk/tree/master/supplychain/quorum-dapp)
 
-- [Demo - Using Azure KeyVault to manage Etherem Keys](https://github.com/jomit/blockchainchalktalk/tree/master/akv)
+- [Demo - Using Azure KeyVault to manage Ethereum Keys](https://github.com/jomit/blockchainchalktalk/tree/master/akv)
