@@ -7,7 +7,11 @@ Code + Walkthroughs to get stared on the blockchain journey...
 
 - [How does Ethereum work, anyway ?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
 
+- [Ethereum White Paper](https://github.com/ethereum/wiki/wiki/White-Paper)
+
 - [Blockchain-as-a-Service on Azure Workshop](https://github.com/MSFTImagine/computerscience/blob/master/Workshop/Azure%20Services/Blockchain%20on%20Azure/Blockchain%20on%20Azure.md)
+
+- [Microsoft Project "Bletchley"](https://github.com/Azure/azure-blockchain-projects/blob/master/bletchley/README.md)
 
 
 #### Walkthroughs
