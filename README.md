@@ -1,5 +1,16 @@
-# Blockchain Chalktalk
-Code + Walkthroughs for blockchain chalk talk
+# Blockchain Getting Started
+Code + Walkthroughs to get stared on the blockchain journey...
+
+#### Basics
+
+- [Bitcoin's Academic Pedigree](https://queue.acm.org/detail.cfm?id=3136559)
+
+- [How does Ethereum work, anyway ?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
+
+- [Blockchain-as-a-Service on Azure Workshop](https://github.com/MSFTImagine/computerscience/blob/master/Workshop/Azure%20Services/Blockchain%20on%20Azure/Blockchain%20on%20Azure.md)
+
+
+#### Walkthroughs
 
 - [Create Private Blockchain locally](https://github.com/jomit/blockchainchalktalk/blob/master/1_PrivateBlockchain.md)
 
