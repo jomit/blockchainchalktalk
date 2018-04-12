@@ -1,0 +1,1 @@
+geth --rpc --rpccorsdomain "*" --rpcapi "eth,web3,personal,net,miner,admin,debug"  --dev --verbosity 3 console
