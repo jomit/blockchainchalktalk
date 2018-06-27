@@ -40,7 +40,7 @@
     eth.pendingTransactions
     (copy the transaction hash)
 
-    geth attach
+    geth attach https://localhost:8545
     miner.start()
     
 ## See permanent record

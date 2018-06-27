@@ -1,11 +1,14 @@
 {
     "config": {
-        "chainId": 112233
+        "chainID": 112233,
+        "homesteadBlock": 0,
+        "eip155Block": 0,
+        "eip158Block": 0
     },
     "difficulty": "0x400",
     "gasLimit": "0x8000000",
     "alloc": {
-        "<ACCOUNT ADDRESS FOT INITIAL ALLOCATION>": {
+        "7cb9ac310beb5746b5def9a7e4a2bdd6563606b3": {
             "balance": "10000000000000000000000000000000"
         }
     }

@@ -17,8 +17,8 @@ $(document).ready(function () {
 
 function addRawMaterial() {
     var currentAccount = $("#accountList").val();
-    web3.personal.unlockAccount(currentAccount, ethAccountPassword, function (error, result) {
-        if(error){ alert(error); return null;}
+    //web3.personal.unlockAccount(currentAccount, ethAccountPassword, function (error, result) {
+        //if(error){ alert(error); return null;}
         $("#addRawMaterialBtn").text("Creating asset...");
 
         var currentAccount = $("#accountList").val();
@@ -56,7 +56,7 @@ function addRawMaterial() {
                 }
             }
         });
-    });
+    //});
 }
 
 function updateAssetList(assetContractAddress, state) {

@@ -1,3 +1,7 @@
+REM  geth --datadir "./data" account new
+
+REM  update the genesis file
+
 RD /S /Q %~dp0\data\geth\chainData
 RD /S /Q %~dp0\data\geth\lightchainData
 RD /S /Q %~dp0\data\geth\dapp

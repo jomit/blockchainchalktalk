@@ -124,8 +124,8 @@ function callContractMethod() {
         privateFor: [privateFor]
     }
 
-    web3.personal.unlockAccount(currentAccount, ethAccountPassword, function (error, result) {
-       if(error){ alert(error); return null;}
+    //web3.personal.unlockAccount(currentAccount, ethAccountPassword, function (error, result) {
+       //if(error){ alert(error); return null;}
 
         if(currentWorkflowMethod == "receivedBySupplier") {
             receivedBySupplier(simpleSupplyChainInstance, data, txnObject);
@@ -138,7 +138,7 @@ function callContractMethod() {
         } else if(currentWorkflowMethod == "purchasedByCustomer") {
             purchasedByCustomer(simpleSupplyChainInstance, data, txnObject);
         }
-    });
+    //});
 }
 
 function receivedBySupplier(simpleSupplyChainInstance,data, txnObject) {
