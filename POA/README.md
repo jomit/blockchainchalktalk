@@ -1,3 +1,21 @@
+# Setup PoA Ethereum Network using Docker
+
+#### Prerequisites
+
+- Install Docker
+
+- Install Git Bash (for Windows)
+
+- Update `~/.bash_profile` file for the [path format workaround on Windows](https://github.com/docker/toolbox/issues/673)
+    - Add `export MSYS_NO_PATHCONV=1` in the `~/.bash_profile` file
+
+#### Run Scripts
+
+
+
+
+# Setup PoA Ethereum Network without Docker
+
 #### Steps to setup PoA Ethereum network
 
 - `mkdir node1, node2`
