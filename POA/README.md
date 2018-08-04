@@ -11,8 +11,11 @@
 
 #### Run Scripts
 
+- `./setupbootnode.sh`
 
+- `./setupnodes.sh <number of nodes>`
 
+- `./startnode.sh 1`
 
 # Setup PoA Ethereum Network without Docker
 
