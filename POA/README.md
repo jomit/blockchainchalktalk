@@ -50,3 +50,10 @@
 - `> net.version`
 - `> eth.sendTransaction({'from':eth.coinbase, 'to':'0x01f385b9dc61250990b9e60d93081cc53cbd1f04', 'value':web3.toWei(3, 'ether')})`
 - `> eth.getTransactionReceipt("0xc58be0eb0a46fe904a99d03572aa354753ce5f2a71d8d8e34d030b890b174f68")`
+
+
+#### Deploy Contract to PoA Network on Azure
+
+- Setup [Ethereum PoA Network on Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-ethereum?tab=Overview)
+
+- Create and deploy smart contract, see `app/deploycontract.js`
