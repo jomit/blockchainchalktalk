@@ -35,6 +35,7 @@ const rawTx = {
     gasLimit: gasLimitHex,
     data: contractData,
     from: accountAddress
+    //privateFor: [""]
 };
 console.log("RAW TX =>" + JSON.stringify(rawTx));
 
