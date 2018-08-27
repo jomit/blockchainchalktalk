@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.17/js/adal.min.js"></script>
+</head>
+<body>
+    <div id="token"></div>
+    <script>
+        var appId = "";
+        var tenant = "";
+        var authContext = new AuthenticationContext({
+            tenant: tenant,
+            clientId: appId,
+            redirectUri: window.location.origin
+        });
+        if (authContext && authContext.isCallback(window.location.hash)) {
+            var err = authContext.getLoginError();
+            if (err) {
+                alert(err);
+            }
+            authContext.handleWindowCallback();
+        }
+        if (authContext && authContext.getCachedToken(appId)) {
+            authContext.getCachedUser();
+            authContext.acquireToken(appId, function (err, accessToken) {
+                if (err || !accessToken) {
+                    alert(err);
+                }
+                document.getElementById("token").innerHTML = accessToken;
+            });
+        } else {
+            authContext.login();
+        }
+    </script>
+</body>
+
+</html>

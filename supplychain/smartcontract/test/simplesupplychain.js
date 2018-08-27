@@ -19,7 +19,7 @@ contract('SimpleSupplyChain', function (accounts) {
       return supplychain.getAssetState.call();
     }).then(function (result) {
       console.log("Asset State =>",result);
-      return supplychain.manufacturingComplete("AP2001","Lot-9","AssetName", "{ factoryLocation : 'Asia' }", { from: manufacturer });
+      return supplychain.manufacturingComplete("{ assetId : 'AP2001', assetName : 'AssetName', lot : 'Lot-9', factoryLocation : 'Asia' }", { from: manufacturer });
     }).then(function (result) {
       logEvents(result);
       return supplychain.getAssetState.call();
