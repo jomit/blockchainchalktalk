@@ -9,7 +9,7 @@ Code + Walkthroughs to get stared on the blockchain journey...
 
 - [Ethereum White Paper](https://github.com/ethereum/wiki/wiki/White-Paper)
 
-- [Blockchain-as-a-Service on Azure Workshop](https://github.com/MSFTImagine/computerscience/blob/master/Workshop/Azure%20Services/Blockchain%20on%20Azure/Blockchain%20on%20Azure.md)
+- [Azure Blockchain Workshop](https://github.com/Microsoft/MCW-Azure-Blockchain/blob/master/Hands-on%20lab/HOL%20step-by%20step%20-%20Azure%20Blockchain.md)
 
 - [Microsoft Project "Bletchley"](https://github.com/Azure/azure-blockchain-projects/blob/master/bletchley/README.md)
 
