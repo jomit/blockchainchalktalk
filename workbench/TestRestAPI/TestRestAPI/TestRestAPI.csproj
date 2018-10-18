@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Polly" Version="5.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Workbench.Client">
+      <HintPath>workbench\Workbench.Client.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

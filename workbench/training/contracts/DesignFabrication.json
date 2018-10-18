@@ -1,0 +1,358 @@
+{
+    "ApplicationName": "DesignFabrication",
+    "DisplayName": "DesignFabrication",
+    "Description": "...",
+    "ApplicationRoles": [
+      {
+        "Name": "Designer",
+        "Description": "..."
+      },
+      {
+        "Name": "ProjectManager",
+        "Description": "..."
+      },
+      {
+        "Name": "FactorySupervisor",
+        "Description": "..."
+      },
+      {
+        "Name": "SiteForeman",
+        "Description": "..."
+      },
+      {
+        "Name": "Auditor",
+        "Description": "..."
+      }
+    ],
+    "Workflows": [
+      {
+        "Name": "DesignFabrication",
+        "DisplayName": "Design Fabrication",
+        "Description": "...",
+        "Initiators": [ "Designer" ],
+        "StartState":  "DesignAccepted",
+        "Properties": [
+          {
+            "Name": "State",
+            "DisplayName": "State",
+            "Description": "Holds the state of the contract",
+            "Type": {
+              "Name": "state"
+            }
+          },
+          {
+            "Name": "CompleteDesignInfo",
+            "DisplayName": "CompleteDesignInfo",
+            "Description": "...",
+            "Type": {
+              "Name": "string"
+            }
+          },
+          {
+            "Name": "ApproveDesignInfo",
+            "DisplayName": "ApproveDesignInfo",
+            "Description": "...",
+            "Type": {
+              "Name": "string"
+            }
+          },
+          {
+            "Name": "SendForFabricationInfo",
+            "DisplayName": "SendForFabricationInfo",
+            "Description": "...",
+            "Type": {
+              "Name": "string"
+            }
+          },
+          {
+            "Name": "ReceiveDesignInfo",
+            "DisplayName": "ReceiveDesignInfo",
+            "Description": "...",
+            "Type": {
+              "Name": "string"
+            }
+          },
+          {
+            "Name": "CompleteSupervisionInfo",
+            "DisplayName": "CompleteSupervisionInfo",
+            "Description": "...",
+            "Type": {
+              "Name": "string"
+            }
+          },
+          {
+            "Name": "ShipmentSiteInfo",
+            "DisplayName": "ShipmentSiteInfo",
+            "Description": "...",
+            "Type": {
+              "Name": "string"
+            }
+          },
+          {
+            "Name": "ReceiveShipmentInfo",
+            "DisplayName": "ReceiveShipmentInfo",
+            "Description": "...",
+            "Type": {
+              "Name": "string"
+            }
+          }
+        ],
+        "Constructor": {
+            "Parameters": [
+                {
+                  "Name": "designInfo",
+                  "Description": "...",
+                  "DisplayName": "Design Information",
+                  "Type": {
+                    "Name": "string"
+                  }
+                }
+              ]
+        },
+        "Functions": [
+          {
+            "Name": "CompleteDesign",
+            "DisplayName": "CompleteDesign",
+            "Description": "...",
+            "Parameters": [
+              {
+                "Name": "completeDesignInfo",
+                "Description": "...",
+                "DisplayName": "Complete Design Info",
+                "Type": {
+                  "Name": "string"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "ApproveDesign",
+            "DisplayName": "ApproveDesign",
+            "Description": "...",
+            "Parameters": [
+              {
+                "Name": "approveDesignInfo",
+                "Description": "...",
+                "DisplayName": "Approve Design Info",
+                "Type": {
+                  "Name": "string"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "SendForFabrication",
+            "DisplayName": "SendForFabrication",
+            "Description": "...",
+            "Parameters": [
+              {
+                "Name": "sendForFabricationInfo",
+                "Description": "...",
+                "DisplayName": "Fabrication Info",
+                "Type": {
+                  "Name": "string"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "ReceiveDesign",
+            "DisplayName": "ReceiveDesign",
+            "Description": "...",
+            "Parameters": [
+              {
+                "Name": "receiveDesignInfo",
+                "Description": "...",
+                "DisplayName": "Receive Design Info",
+                "Type": {
+                  "Name": "string"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "CompleteSupervision",
+            "DisplayName": "CompleteSupervision",
+            "Description": "...",
+            "Parameters": [
+              {
+                "Name": "completeSupervisionInfo",
+                "Description": "...",
+                "DisplayName": "Complete Supervision Info",
+                "Type": {
+                  "Name": "string"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "ApproveShipment",
+            "DisplayName": "ApproveShipment",
+            "Description": "...",
+            "Parameters": [
+              {
+                "Name": "shipmentSiteInfo",
+                "Description": "...",
+                "DisplayName": "Shipment Site Info",
+                "Type": {
+                  "Name": "string"
+                }
+              }
+            ]
+          },
+          {
+            "Name": "ReceiveShipment",
+            "DisplayName": "ReceiveShipment",
+            "Description": "...",
+            "Parameters": [
+              {
+                "Name": "receiveShipmentInfo",
+                "Description": "...",
+                "DisplayName": "Receive Shipment Info",
+                "Type": {
+                  "Name": "string"
+                }
+              }
+            ]
+          }
+        ],
+        "States": [
+          {
+            "Name": "DesignAccepted",
+            "DisplayName": "DesignAccepted",
+            "Description": "...",
+            "PercentComplete": 12,
+            "Value": 0,
+            "Style": "Success",
+            "Transitions": [
+              {
+                "AllowedRoles": ["Designer"],
+                "AllowedInstanceRoles": [],
+                "Description": "...",
+                "Function": "CompleteDesign",
+                "NextStates": [ "DesignComplete" ],
+                "DisplayName": "Complete Design"
+              }
+            ]
+          },
+          {
+            "Name": "DesignComplete",
+            "DisplayName": "DesignComplete",
+            "Description": "...",
+            "PercentComplete": 24,
+            "Value": 1,
+            "Style": "Success",
+            "Transitions": [
+              {
+                "AllowedRoles": ["ProjectManager"],
+                "AllowedInstanceRoles": [],
+                "Description": "...",
+                "Function": "ApproveDesign",
+                "NextStates": [ "DesignApproved" ],
+                "DisplayName": "Approve Design"
+              }
+            ]
+          },
+          {
+            "Name": "DesignApproved",
+            "DisplayName": "DesignApproved",
+            "Description": "...",
+            "PercentComplete": 36,
+            "Value": 2,
+            "Style": "Success",
+            "Transitions": [
+              {
+                "AllowedRoles": ["ProjectManager"],
+                "AllowedInstanceRoles": [],
+                "Description": "...",
+                "Function": "SendForFabrication",
+                "NextStates": [ "SentForFabrication" ],
+                "DisplayName": "Send For Fabrication"
+              }
+            ]
+          },
+          {
+            "Name": "SentForFabrication",
+            "DisplayName": "SentForFabrication",
+            "Description": "...",
+            "PercentComplete": 48,
+            "Value": 3,
+            "Style": "Success",
+            "Transitions": [
+              {
+                "AllowedRoles": ["FactorySupervisor"],
+                "AllowedInstanceRoles": [],
+                "Description": "...",
+                "Function": "ReceiveDesign",
+                "NextStates": [ "ReceivedForSupervision" ],
+                "DisplayName": "Receive Design"
+              }
+            ]
+          },
+          {
+            "Name": "ReceivedForSupervision",
+            "DisplayName": "ReceivedForSupervision",
+            "Description": "...",
+            "PercentComplete": 60,
+            "Value": 4,
+            "Style": "Success",
+            "Transitions": [
+              {
+                "AllowedRoles": ["FactorySupervisor"],
+                "AllowedInstanceRoles": [],
+                "Description": "...",
+                "Function": "CompleteSupervision",
+                "NextStates": [ "SupervisionComplete" ],
+                "DisplayName": "Complete Supervision"
+              }
+            ]
+          },
+          {
+            "Name": "SupervisionComplete",
+            "DisplayName": "SupervisionComplete",
+            "Description": "...",
+            "PercentComplete": 72,
+            "Value": 5,
+            "Style": "Success",
+            "Transitions": [
+              {
+                "AllowedRoles": ["ProjectManager"],
+                "AllowedInstanceRoles": [],
+                "Description": "...",
+                "Function": "ApproveShipment",
+                "NextStates": [ "ShipmentApproved" ],
+                "DisplayName": "Approve Shipment"
+              }
+            ]
+          },
+          {
+            "Name": "ShipmentApproved",
+            "DisplayName": "ShipmentApproved",
+            "Description": "...",
+            "PercentComplete": 84,
+            "Value": 6,
+            "Style": "Success",
+            "Transitions": [
+              {
+                "AllowedRoles": ["SiteForeman"],
+                "AllowedInstanceRoles": [],
+                "Description": "...",
+                "Function": "ReceiveShipment",
+                "NextStates": [ "ShipmentReceived" ],
+                "DisplayName": "Receive Shipment"
+              }
+            ]
+          },
+          {
+            "Name": "ShipmentReceived",
+            "DisplayName": "ShipmentReceived",
+            "Description": "...",
+            "PercentComplete": 100,
+            "Value": 7,
+            "Style": "Success",
+            "Transitions": []
+          }
+        ]  
+      }
+     ]
+  }

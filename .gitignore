@@ -74,3 +74,5 @@ node2*/
 boot.key
 .puppeth
 *.bak
+
+.vs*/
