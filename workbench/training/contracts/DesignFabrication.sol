@@ -95,4 +95,8 @@ contract DesignFabrication is WorkbenchBase("DesignFabrication", "DesignFabricat
         ContractUpdated("ReceiveShipment");
     }
 
+    function getMEPState() public view returns (uint8)  {
+        return uint8(State);
+    }
+
 }
