@@ -21,7 +21,7 @@ contract WorkbenchBase {
     }
 }
 
-contract DesignFabrication is WorkbenchBase("DesignFabrication", "DesignFabrication")
+contract DesignFabricationNew is WorkbenchBase("DesignFabricationNew", "DesignFabricationNew")
 {
 
     //Set of States
@@ -39,7 +39,7 @@ contract DesignFabrication is WorkbenchBase("DesignFabrication", "DesignFabricat
     string public ShipmentSiteInfo;
     string public ReceiveShipmentInfo;
 
-    function DesignFabrication(string designInfo) public
+    function DesignFabricationNew(string designInfo) public
     {
         DesignInfo = designInfo;
         State = StateType.DesignAccepted;  

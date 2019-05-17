@@ -1,6 +1,6 @@
 {
-    "ApplicationName": "DesignFabrication",
-    "DisplayName": "DesignFabrication",
+    "ApplicationName": "DesignFabricationNew",
+    "DisplayName": "DesignFabricationNew",
     "Description": "...",
     "ApplicationRoles": [
       {
@@ -26,7 +26,7 @@
     ],
     "Workflows": [
       {
-        "Name": "DesignFabrication",
+        "Name": "DesignFabricationNew",
         "DisplayName": "Design Fabrication",
         "Description": "...",
         "Initiators": [ "Designer" ],
